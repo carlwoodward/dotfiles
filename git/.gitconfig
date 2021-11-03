@@ -1,0 +1,68 @@
+# User setup {{{
+[user]
+  name = Carl Woodward
+  email = carl@88cartell.com
+
+[color]
+  ui = true
+
+[core]
+  editor = "vim"
+  excludesfile = /Users/carl/.gitexclude
+# }}}
+
+# Aliases {{{
+[alias]
+  b="branch"
+  ba="branch -a"
+  co="checkout"
+  cob="checkout -b"
+  cot="checkout --track"
+  dc="diff --cached"
+  d="diff"
+  f="fetch"
+  ff="pull --ff-only origin"
+  l="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
+  lc="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %B %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
+  lb="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\n%b' --date=relative"
+  la="log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
+  ld="log --all --date-order --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
+  lds="log -p --stat"
+  lt="log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=local"
+  diffcommits="log --left-right --cherry-pick"
+  diffcommitscode="log -p --left-right --cherry-pick"
+  ru="remote update"
+  rh="reset --hard"
+  rs="reset --soft"
+  s="status -s"
+  po="push origin"
+  pu="pull origin"
+  rbo="rebase origin"
+  mergedryrun="merge --no-commit --no-ff"
+# }}}
+
+# Misc {{{
+[rerere]
+  enabled = true
+
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+
+[help]
+  autocorrect = 1
+[push]
+  default = simple
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[credential]
+  helper = osxkeychain
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+# }}}
