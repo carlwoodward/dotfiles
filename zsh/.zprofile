@@ -6,3 +6,5 @@ export PROMPT='[%D{%f/%m/%y} %D{%L:%M:%S}] %~: '
 PROMPT='[%D{%f/%m/%y} %D{%L:%M:%S}] %~: '
 
 alias vim=nvim
+alias g=git
+alias v=nvim
