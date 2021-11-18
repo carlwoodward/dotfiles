@@ -1,7 +1,7 @@
 require('settings')
 require('keymaps')
 require('plugins/packer')
-require('plugins/feline')
+require('plugins/lualine')
 require('plugins/nvim-autopairs')
 require('plugins/nvim-treesitter')
 require('plugins/nvim-lspconfig')

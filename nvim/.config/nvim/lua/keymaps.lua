@@ -11,7 +11,7 @@ map('n', '<leader>w', ':w<CR>', default_opts)
 map('i', '<leader>w', '<C-c>:w<CR>', default_opts)
 
 map('n', '<leader>n', ':nohlsearch<CR>', default_opts)
-map('n', '<leader>t', ':Telescope git_files disable_devicons=true<CR>', default_opts)
+map('n', '<leader>t', ':Telescope git_files disable_devicons=false<CR>', default_opts)
 map('n', '<leader>a', ':Telescope live_grep disable_devicons=true<CR>', default_opts)
 map('n', '<leader>b', ':Telescope buffers disable_devicons=true<CR>', default_opts)
 map('n', '<leader>gs', ':Neogit<CR>', default_opts)

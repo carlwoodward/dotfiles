@@ -11,6 +11,8 @@ return require('packer').startup(function()
   use 'editorconfig/editorconfig-vim'
   use 'sbdchd/neoformat'
   use 'TimUntersberger/neogit'
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-eunuch'
 
   -- autocomplete
   use { 'hrsh7th/nvim-cmp',
@@ -20,8 +22,9 @@ return require('packer').startup(function()
       'hrsh7th/cmp-buffer',
     },
   }
+
   -- statusline
-  use { 'famiu/feline.nvim',
+  use { 'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
@@ -37,6 +40,18 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   } 
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- colorscheme
   use 'ishan9299/nvim-solarized-lua'
