@@ -15,6 +15,8 @@ return require('packer').startup(function()
   use 'tpope/vim-eunuch'
   use 'sheerun/vim-polyglot'
 
+  use 'glepnir/lspsaga.nvim'
+
   -- autocomplete
   use { 'hrsh7th/nvim-cmp',
     requires = {
