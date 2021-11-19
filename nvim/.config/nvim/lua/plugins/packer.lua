@@ -13,6 +13,7 @@ return require('packer').startup(function()
   use 'TimUntersberger/neogit'
   use 'tpope/vim-commentary'
   use 'tpope/vim-eunuch'
+  use 'sheerun/vim-polyglot'
 
   -- autocomplete
   use { 'hrsh7th/nvim-cmp',
