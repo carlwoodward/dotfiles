@@ -13,22 +13,29 @@ return require('packer').startup(function()
   use 'TimUntersberger/neogit'
   use 'tpope/vim-commentary'
   use 'tpope/vim-eunuch'
+  use 'tpope/vim-surround'
   use 'sheerun/vim-polyglot'
-
-  use 'glepnir/lspsaga.nvim'
-
-  -- autocomplete
-  use { 'hrsh7th/nvim-cmp',
-    requires = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-    },
-  }
+  use 'rafamadriz/friendly-snippets'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
 
   -- statusline
-  use { 'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+  use "nvim-lualine/lualine.nvim"
+  
+  use {
+    "projekt0n/github-nvim-theme",
+    -- after = "nvim-lualine/lualine.nvim",
+    config = function()
+      require("github-theme").setup({
+          theme_style = "light",
+          hide_inactive_statusline = false
+        })
+    end
   }
 
   -- git labels

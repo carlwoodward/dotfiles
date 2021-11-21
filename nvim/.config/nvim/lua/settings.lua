@@ -16,7 +16,7 @@ opt.autoindent = true
 
 -- Colorscheme
 opt.termguicolors = true
-cmd [[colorscheme solarized]]
+cmd [[colorscheme github_light]]
 
 exec([[
   autocmd!
