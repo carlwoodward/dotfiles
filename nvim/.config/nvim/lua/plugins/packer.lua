@@ -3,9 +3,8 @@ cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use '9mm/vim-closer'
+  -- use '9mm/vim-closer'
   use 'kyazdani42/nvim-web-devicons'
-  use 'jiangmiao/auto-pairs'
   use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
   use 'editorconfig/editorconfig-vim'
@@ -27,17 +26,6 @@ return require('packer').startup(function()
   -- statusline
   use "nvim-lualine/lualine.nvim"
   
-  use {
-    "projekt0n/github-nvim-theme",
-    -- after = "nvim-lualine/lualine.nvim",
-    config = function()
-      require("github-theme").setup({
-          theme_style = "light",
-          hide_inactive_statusline = false
-        })
-    end
-  }
-
   -- git labels
   use { 'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },

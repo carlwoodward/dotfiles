@@ -16,7 +16,8 @@ opt.autoindent = true
 
 -- Colorscheme
 opt.termguicolors = true
-cmd [[colorscheme github_light]]
+vim.o.background = "light"
+cmd [[colorscheme solarized-high]]
 
 exec([[
   autocmd!
