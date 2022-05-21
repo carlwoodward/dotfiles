@@ -4,7 +4,7 @@ local fn = vim.fn
 local g = vim.g
 local opt = vim.opt
 
-g.mapleader = ','
+g.mapleader = ","
 opt.swapfile = false
 
 opt.showmatch = true
@@ -13,11 +13,14 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.autoindent = true
+opt.timeoutlen = 1000
+opt.ttimeoutlen = 0
 
 -- Colorscheme
 opt.termguicolors = true
 vim.o.background = "light"
-cmd [[colorscheme solarized-high]]
+vim.g["g:gruvbox_contrast_light"] = "hard"
+cmd [[colorscheme everforest]]
 
 exec([[
   autocmd!

@@ -38,6 +38,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   } 
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
 
   use {
     "folke/trouble.nvim",
@@ -51,6 +52,27 @@ return require('packer').startup(function()
     end
   }
 
+  -- use {
+  --   "max397574/better-escape.nvim",
+  --   config = function()
+  --     require("better_escape").setup {
+  --       mapping = {"jk", "jj"},
+  --     }
+  --   end,
+  -- }
+
   -- colorscheme
   use 'ishan9299/nvim-solarized-lua'
+  use {
+    "morhetz/gruvbox",
+  }
+  use 'sainnhe/everforest'
+  use {
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim"
+  } 
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 end)

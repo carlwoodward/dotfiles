@@ -8,3 +8,7 @@ PROMPT='[%D{%f/%m/%y} %D{%L:%M:%S}] %~: '
 alias vim=nvim
 alias g=git
 alias v=nvim
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/carl/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
