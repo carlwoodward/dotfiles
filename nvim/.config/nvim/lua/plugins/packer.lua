@@ -3,10 +3,14 @@ cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  -- use '9mm/vim-closer'
+
+  use {
+    "williamboman/nvim-lsp-installer",
+    "neovim/nvim-lspconfig",
+  }
+
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'neovim/nvim-lspconfig'
   use 'editorconfig/editorconfig-vim'
   use 'sbdchd/neoformat'
   use 'TimUntersberger/neogit'
@@ -51,15 +55,6 @@ return require('packer').startup(function()
       }
     end
   }
-
-  -- use {
-  --   "max397574/better-escape.nvim",
-  --   config = function()
-  --     require("better_escape").setup {
-  --       mapping = {"jk", "jj"},
-  --     }
-  --   end,
-  -- }
 
   -- colorscheme
   use 'ishan9299/nvim-solarized-lua'

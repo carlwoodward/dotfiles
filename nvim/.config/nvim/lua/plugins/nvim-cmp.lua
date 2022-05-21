@@ -49,10 +49,9 @@ cmp.setup {
 
   -- load sources, see: https://github.com/topics/nvim-cmp
   sources = cmp.config.sources({
+    { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
-  }, {
-    { name = 'buffer' },
   }),
 
   completion = {
