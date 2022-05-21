@@ -71,7 +71,7 @@ https://github.com/typescript-language-server/typescript-language-server
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver' }
+local servers = { 'tsserver', 'gopls', 'vimls', 'graphql', 'sqls', 'rust_analyzer', 'golangci_lint_ls', 'solidity_ls', 'sorbet' }
 
 -- Set settings for language servers below
 --
